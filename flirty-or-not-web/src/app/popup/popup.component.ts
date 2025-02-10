@@ -29,6 +29,9 @@ export class PopupComponent {
   }
 
   togglePopup() {
-    this.showPopup = !this.showPopup;
+    this.showPopup = true;
+    setTimeout(() => {
+      this.showPopup = false;
+    }, 3000); // Hide after 3 seconds
   }
 }
