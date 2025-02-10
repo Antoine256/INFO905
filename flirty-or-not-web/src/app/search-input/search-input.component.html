@@ -1,0 +1,13 @@
+<div class="flex items-center space-x-2">
+    <input 
+        type="text" 
+        [(ngModel)]="searchText"
+        placeholder="Type here" 
+        class="input input-bordered input-error w-full max-w-xs rounded-r-none" 
+        (keydown.enter)="search()" />
+    
+    <!-- Optionally display the search result -->
+    <div *ngIf="result">
+        <pre>{{ result | json }}</pre>
+    </div>
+</div>

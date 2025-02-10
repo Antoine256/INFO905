@@ -6,15 +6,18 @@
     </div>
     <span>LOVE</span>
   </div>
-  <div class="flex">
-    <input type="text" placeholder="Type here" class="input input-bordered input-error w-full max-w-xs rounded-r-none" />
-    <app-popup ></app-popup>
+  
+  <!-- Ensuring the flex container for search and popup is properly aligned -->
+  <div class="flex space-x-4">
+    <app-search-input></app-search-input>
+    <app-popup></app-popup>
   </div>
 </div>
-<div class="progress-container">
-  <!-- La barre de progression remplie -->
-  <div class="progress" style="height: {{percentage}}%"></div>
-  <!-- Le texte indiquant le pourcentage -->
-  <div class="progress-text">{{percentage}}%</div>
-</div>
 
+<!-- Progress bar container -->
+<div class="progress-container mt-4">
+  <!-- The filled progress bar -->
+  <div class="progress" :style="{ height: percentage + '%' }"></div>
+  <!-- Text indicating the percentage -->
+  <div class="progress-text">{{ percentage }}%</div>
+</div>

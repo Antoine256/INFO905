@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { PopupComponent } from '../popup/popup.component';
-
+import { SearchInputComponent } from '../search-input/search-input.component';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [PopupComponent],
+  imports: [PopupComponent,SearchInputComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
