@@ -6,11 +6,11 @@
     </div>
     <span>LOVE</span>
   </div>
-  
+
   <!-- Ensuring the flex container for search and popup is properly aligned -->
   <div class="flex space-x-4">
     <app-search-input></app-search-input>
-    <app-popup></app-popup>
+    <app-popup (counterChange)="counterChange($event)"></app-popup>
   </div>
 </div>
 
