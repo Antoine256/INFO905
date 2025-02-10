@@ -16,4 +16,9 @@ export class HomeComponent {
     console.log('Button clicked!');
     this.percentage = Math.floor(Math.random() * 100);
   }
+
+  counterChange(event: number) {
+    console.log('Counter changed to: ' + event);
+    this.percentage = event*100/3;
+  }
 }
