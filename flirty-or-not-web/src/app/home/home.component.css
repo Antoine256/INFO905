@@ -146,3 +146,51 @@ span {
     --move: translateY(-250%);
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+/* Conteneur de la barre de progression, positionné en absolu à droite */
+.progress-container {
+  position: absolute;
+  right: 20px;                 /* Distance du bord droit (modifiable selon vos besoins) */
+  top: 50%;
+  transform: translateY(-50%); /* Centre verticalement */
+  width: 50px;                 /* Largeur de la barre */
+  height: 300px;               /* Hauteur de la barre */
+  background: #ffb3b3;         /* Fond rose moyen */
+  border: 3px solid #ff4d4d;   /* Bordure rouge vif */
+  border-radius: 25px;         /* Arrondit tous les bords */
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* La partie remplie de la barre de progression */
+.progress {
+  position: absolute;
+  bottom: 0;                   /* Remplit depuis le bas */
+  width: 100%;   /* Pourcentage de remplissage (modifiable) */
+  background: linear-gradient(to top, #ff4d4d, #ff8080);
+  border-radius: 25px 25px 0 0;  /* Arrondit uniquement le haut */
+  transition: height 0.5s ease-in-out;
+}
+
+/* Texte affichant le pourcentage de progression */
+.progress-text {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+  pointer-events: none;
+}
