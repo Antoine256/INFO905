@@ -8,6 +8,13 @@
   </div>
   <div class="flex">
     <input type="text" placeholder="Type here" class="input input-bordered input-error w-full max-w-xs rounded-r-none" />
-    <app-popup></app-popup>
+    <app-popup ></app-popup>
   </div>
 </div>
+<div class="progress-container">
+  <!-- La barre de progression remplie -->
+  <div class="progress" style="height: {{percentage}}%"></div>
+  <!-- Le texte indiquant le pourcentage -->
+  <div class="progress-text">{{percentage}}%</div>
+</div>
+
