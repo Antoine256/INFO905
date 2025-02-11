@@ -4,7 +4,7 @@ import { SearchInputComponent } from '../search-input/search-input.component';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [PopupComponent,SearchInputComponent],
+  imports: [PopupComponent, SearchInputComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
