@@ -6,18 +6,18 @@
     </div>
     <span>LOVE</span>
   </div>
-  
+
   <!-- Ensuring the flex container for search and popup is properly aligned -->
   <div class="flex space-x-4">
     <app-search-input></app-search-input>
-    <app-popup></app-popup>
+    <app-popup (counterChange)="counterChange($event)"></app-popup>
   </div>
 </div>
 
 <!-- Progress bar container -->
 <div class="progress-container mt-4">
   <!-- The filled progress bar -->
-  <div class="progress" :style="{ height: percentage + '%' }"></div>
+  <div class="progress" style="height: {{percentage + '%'}}"></div>
   <!-- Text indicating the percentage -->
   <div class="progress-text">{{ percentage }}%</div>
 </div>

@@ -57,10 +57,111 @@
         transform: translate(-40%, -60%) scale(1) rotate(45deg);
     }
     50% {
-        transform: translate(-40%, -60%) scale(1.3) rotate(45deg); 
+        transform: translate(-40%, -60%) scale(1.3) rotate(45deg);
     }
     100% {
         transform: translate(-40%, -60%) scale(1) rotate(45deg);
     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Conteneur central de l'animation */
+.popup-content2 {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border: 3px solid #ff4d4d;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #fff;
+}
+
+/* Style commun aux images */
+.popup-content2 img {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+/* Image de la fille contente (happy) : visible au départ, puis fade out */
+.popup-content2 img.happy {
+  opacity: 1;
+  /* Lancement de l'animation fadeOut après 2s pendant 2s */
+  animation: fadeOut 2s forwards 2s;
+}
+
+/* Image de la personne mécontente (unhappy) : cachée puis fade in */
+.popup-content2 img.unhappy {
+  /* Commence l'animation après 4s pendant 2s */
+  animation: fadeIn 2s forwards 4s;
+}
+
+/* Ligne de barrer qui apparaît sur l'image happy */
+.popup-content2 .strike2 {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: red;
+  transform: translateY(-50%) scaleX(0);
+  transform-origin: center;
+  opacity: 0;
+  /* L'animation démarre en même temps que le fade out de l'image happy */
+  animation: strikeAnim 2s forwards 2s;
+}
+
+/* Animation de fade out pour l'image happy */
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+/* Animation de fade in pour l'image unhappy */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Animation de la ligne de barrer :
+   - Au début, elle est invisible et son échelle horizontale est 0 ;
+   - Puis elle apparaît en s'étirant sur toute la largeur. */
+@keyframes strikeAnim {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%) scaleX(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-50%) scaleX(1);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-50%) scaleX(1);
+  }
 }
 
