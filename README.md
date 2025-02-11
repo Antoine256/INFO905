@@ -49,3 +49,10 @@
 - Accuracy: 0.82
 
 The application should be accessible at [http://localhost:4200/](http://localhost:4200/)
+
+
+### huggingface links for the dataset and the model :
+
+dataset : https://huggingface.co/datasets/TaumeV/flirty_or_not_IA_extended
+
+model : https://huggingface.co/Unechevre/flirtyORnot
