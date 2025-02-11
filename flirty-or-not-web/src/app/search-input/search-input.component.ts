@@ -23,7 +23,7 @@ export class SearchInputComponent {
     this.http.get(url).subscribe(
       (response) => {
         this.result = response;
-        console.log('Search Result:', this.result);
+        console.log('Search Result:',response);
       },
       (error) => {
         console.error('Error occurred:', error);

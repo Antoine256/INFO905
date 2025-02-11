@@ -53,6 +53,7 @@ export class PopupComponent {
   async searchResult() {
     console.log('searchResult');
     let response = await this.search() as number
+    console.log(response);
     this.updateCounter(response)
     if (response == 0) {
       this.showPopup2 = true;
@@ -70,9 +71,12 @@ export class PopupComponent {
   async search() {
     const url = `http://127.0.0.1:5000/classify?text=${encodeURIComponent(this.searchText)}`;
       try {
-        const response = await firstValueFrom(this.http.get<any>(url));
+        const responsetest = await fetch(url)
+        const res2 = await responsetest.json()
+        console.log(res2)
+        const response = res2[0].label
         let res = 0
-        if (response[0].label == "LABEL_1") res = 1
+        if (response == "LABEL_1") res = 1
         return res;
       } catch (error) {
         console.error('Erreur dans getData:', error);
