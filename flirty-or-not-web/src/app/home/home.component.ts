@@ -16,6 +16,6 @@ export class HomeComponent {
 
   counterChange(event: number) {
     console.log('Counter changed to: ' + event);
-    this.percentage = event*100/3;
+    this.percentage = event*100/2;
   }
 }
