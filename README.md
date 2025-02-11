@@ -1,35 +1,46 @@
-# Flirty or not application
+# Flirty or Not Application
 
-## groupe :
-### nom du groupe :  flirtyboys
-### membres: 
-Enzo Marchal le boss
+## Group
+**Group Name:** Flirtyboys
 
-Tom Voituret dit el matador
+**Members:**
+- Enzo Marchal (The Boss)
+- Tom Voituret (El Matador)
+- Yvann Uzelac (The Beast from the East)
+- Antoine Dupasquier (The Wine Expert)
 
-Yvann Uzelac surnommer la bête de l'est
+## Launching the Application
 
-Antoine Dupasquier alias le caviste
+### Backend Setup
+Navigate to `code/BACK` and run:
+```bash
+pip install -r requirements.txt
+```
+Then, start the server:
+```bash
+python3 server.py
+```
 
-## lancement de l'application : 
+### Frontend Setup
+Navigate to `code/UI` and run:
 
-### pour lancer le model :
-aller dans dataset\default et lancer :
-    pip install -r .\requirements.txt
-puis lancer :
-    python3 .\server.py
+If Angular is not installed:
+```bash
+npm install -g @angular/cli@17
+```
+Then, install dependencies:
+```bash
+npm install
+```
+Finally, start the development server:
+```bash
+ng serve
+```
 
+### Training the Model
+Navigate to `code/TRAIN` and run:
+```bash
+# Add the necessary commands to train the model here
+```
 
-### pour lancer le front :
-
-aller dans flirty-or-not-web et lancer :
-
-si angular n'est pas installé :
-    npm install -g @angular/cli@17
-puis :
-    npm install
-
-et finalement :
-    ng serve
-
-l'adresse est normalement http://localhost:4200/
+The application should be accessible at [http://localhost:4200/](http://localhost:4200/)
