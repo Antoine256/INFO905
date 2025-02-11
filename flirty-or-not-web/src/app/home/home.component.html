@@ -9,8 +9,12 @@
 
   <!-- Ensuring the flex container for search and popup is properly aligned -->
   <div class="flex space-x-4">
-    <app-search-input></app-search-input>
-    <app-popup (counterChange)="counterChange($event)"></app-popup>
+    <input
+      type="text"
+      placeholder="Type here"
+      [(ngModel)]="textToSearch"
+      class="input input-bordered input-error w-full max-w-xs rounded-r-none"/>
+    <app-popup (counterChange)="counterChange($event)" searchText="{{textToSearch}}"></app-popup>
   </div>
 </div>
 
